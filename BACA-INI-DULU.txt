@@ -1,0 +1,89 @@
+╔════════════════════════════════════════════════════════════╗
+║                                                            ║
+║          📝 TODO LIST APP - CARA MENJALANKAN              ║
+║                                                            ║
+╚════════════════════════════════════════════════════════════╝
+
+
+🚀 CARA TERCEPAT (3 LANGKAH):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Double-click file:  START-APP.bat
+
+2. Tunggu 10 detik (2 window akan terbuka)
+
+3. Buka browser:  http://localhost:3000
+
+
+✅ SELESAI! Aplikasi sudah jalan!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📌 YANG AKAN TERJADI:
+
+✓ File .env.local otomatis dibuat
+✓ Database lama otomatis dihapus
+✓ Backend server start di port 8000
+✓ Frontend server start di port 3000
+✓ 2 terminal window terbuka
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 URL PENTING:
+
+Frontend:  http://localhost:3000  ← Buka ini!
+Backend:   http://localhost:8000
+API Docs:  http://localhost:8000/docs
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 TEST APLIKASI:
+
+1. Buka http://localhost:3000
+2. Klik "Daftar sekarang"
+3. Isi form registrasi
+4. Ikuti onboarding (3 langkah)
+5. Mulai pakai aplikasi!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🛑 CARA STOP:
+
+Tutup 2 terminal window yang terbuka
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ JIKA MASIH "FAILED TO FETCH":
+
+1. Pastikan kedua server jalan (cek 2 terminal window)
+2. Tunggu 10-15 detik setelah start
+3. Refresh browser (F5)
+4. Cek http://localhost:8000 - harus muncul JSON
+5. Jika masih error, restart komputer lalu coba lagi
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 TIPS:
+
+• Jangan tutup terminal window saat aplikasi jalan
+• Jika port 3000/8000 sudah dipakai, tutup aplikasi lain
+• Baca CARA-MENJALANKAN.md untuk detail lengkap
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 TIDAK PERLU INSTALL APA-APA LAGI!
+
+Semua dependency sudah terinstall.
+Tinggal jalankan START-APP.bat
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Selamat menggunakan Todo List App! 🎉

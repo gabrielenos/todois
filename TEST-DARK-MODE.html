@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Dark Mode</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="p-8">
+    <div class="bg-white dark:bg-gray-900 min-h-screen transition-colors">
+        <div class="max-w-2xl mx-auto">
+            <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">
+                Test Dark Mode
+            </h1>
+            
+            <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-4">
+                <p class="text-gray-800 dark:text-gray-200 mb-4">
+                    Ini adalah test untuk dark mode. Klik tombol di bawah untuk toggle.
+                </p>
+                
+                <button 
+                    onclick="toggleDarkMode()"
+                    class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold"
+                >
+                    Toggle Dark Mode
+                </button>
+                
+                <div class="mt-4 p-4 bg-white dark:bg-gray-700 rounded">
+                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                        Current mode: <span id="currentMode" class="font-bold">Light</span>
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                        HTML classes: <span id="htmlClasses" class="font-mono">-</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-200 dark:border-yellow-800 p-4 rounded-lg">
+                <p class="text-yellow-800 dark:text-yellow-200">
+                    ⚠️ Jika background tidak berubah, berarti ada masalah dengan Tailwind dark mode.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            
+            console.log('Before toggle:', html.className);
+            
+            if (isDark) {
+                html.classList.remove('dark');
+                document.getElementById('currentMode').textContent = 'Light';
+            } else {
+                html.classList.add('dark');
+                document.getElementById('currentMode').textContent = 'Dark';
+            }
+            
+            console.log('After toggle:', html.className);
+            document.getElementById('htmlClasses').textContent = html.className || '(empty)';
+        }
+        
+        // Update on load
+        document.getElementById('htmlClasses').textContent = document.documentElement.className || '(empty)';
+    </script>
+</body>
+</html>

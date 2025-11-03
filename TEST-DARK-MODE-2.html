@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Dark Mode</title>
+    <style>
+        :root {
+            --background: #ffffff;
+            --foreground: #171717;
+        }
+
+        .dark {
+            --background: #0f172a;
+            --foreground: #f1f5f9;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: var(--background);
+            color: var(--foreground);
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #3b82f6;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #2563eb;
+            transform: scale(1.05);
+        }
+
+        .status {
+            padding: 20px;
+            border-radius: 12px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌓 Test Dark Mode</h1>
+        <div class="status">
+            <p>Current Mode: <strong id="mode">Light</strong></p>
+            <p>HTML Class: <strong id="htmlClass">-</strong></p>
+        </div>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+
+    <script>
+        function updateStatus() {
+            const isDark = document.documentElement.classList.contains('dark');
+            document.getElementById('mode').textContent = isDark ? 'Dark' : 'Light';
+            document.getElementById('htmlClass').textContent = document.documentElement.className || '(none)';
+        }
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            updateStatus();
+            console.log('Toggled! Classes:', document.documentElement.className);
+        }
+
+        updateStatus();
+    </script>
+</body>
+</html>
